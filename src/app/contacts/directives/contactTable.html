@@ -1,0 +1,34 @@
+Search: <input ng-model="query">
+<br>Double-click on name to edit.
+<table class="table table-striped">
+    <tr>
+        <th><a href="" ng-click="sortField = 'firstName'; reverse = !reverse">First Name</a></th>
+        <th><a href="" ng-click="sortField = 'lastName'; reverse = !reverse">Last Name</a></th>
+        <th><a href="" ng-click="sortField = '-stars'; reverse = !reverse">Stars</a></th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="contact in vm.contacts | filter:query | orderBy:vm.sortField:reverse">
+        <td>
+            <div class="view" ng-if='contact !== vm.editedContact'>
+                <label ng-dblclick="vm.editContact(contact)" >{{contact.firstName}}</label>
+            </div>
+            <form ng-submit="vm.doneEditing(contact)" ng-if='contact == vm.editedContact'>
+                <input class="edit" ng-model="contact.firstName" contact-blur="vm.doneEditing(contact)" contact-focus="contact == vm.editedContact">
+            </form>
+        </td>
+        <td>
+            <div class="view" ng-if='contact !== vm.editedContact'>
+                <label ng-dblclick="vm.editContact(contact)" >{{contact.lastName}}</label>
+            </div>
+            <form ng-submit="vm.doneEditing(contact)" ng-if='contact == vm.editedContact'>
+                <input class="edit" ng-model="contact.lastName" contact-blur="vm.doneEditing(contact)" contact-focus="contact == vm.editedContact">
+            </form>
+        </td>
+        <td>
+            {{contact.stars}}
+            <a href="" ng-click="vm.starsUp(contact)">^</a>
+            <a href="" ng-click="vm.starsDown(contact)">v</a>
+        </td>
+        <td><button class='btn btn-xs btn-danger' ng-click="vm.removeContact(contact)">X</button></td>
+    </tr>
+</table>

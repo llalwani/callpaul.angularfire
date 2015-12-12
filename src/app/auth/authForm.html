@@ -13,7 +13,7 @@
     <!-- Email error -->
     <div ng-show="authForm.$submitted">
         <p ng-show="authForm.email.$error.required" class="text-danger">Email required</p>
-        <p ng-show="authForm.email.$error.email" class="text-danger">Please enter a valid email.</p>
+        <p ng-show="authForm.email.$error.email" class="text-danger">You failed bub. Please enter a valid email.</p>
     </div>
 
     <!-- Password input -->
@@ -23,7 +23,7 @@
     <div ng-show="authForm.$submitted">
         <p ng-show="authForm.password.$error.required" class="text-danger">Password required</p>
     </div>
-
+    <!--how does this button differentiate between the login & register-->
     <input type="submit" ng-click="authForm.$valid && vm.submitAction({user: vm.user})" ng-value="vm.formTitle" class="btn btn-lg btn-primary btn-block"/>
 
 </form>

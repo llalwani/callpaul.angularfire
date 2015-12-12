@@ -12,6 +12,7 @@
       controller: AuthFormController,
       controllerAs: 'vm',
       bindToController: true,
+      //same as $scope
       scope: {
         submitAction: '&',
         error: '=',

@@ -30,7 +30,7 @@
     function login(user) {
       return authService.login(user)
         .then(function(response) {
-          $location.path('/waitlist');
+          $location.path('/contacts');
           return response;
         })
         .catch(function(error) {

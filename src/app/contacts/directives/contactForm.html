@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="text-center">Contacts</h1>
+    <form ng-submit="vm.addContact()" class="form-inline party-form" role="form">
+        <div class="form-group">
+            <input ng-model="vm.newContact.firstName" type="text" class="form-control" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+            <input ng-model="vm.newContact.lastName" type="text" class="form-control" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+            <input ng-model="vm.newContact.stars" type="number" class="form-control" placeholder="Stars" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
+
