@@ -1,4 +1,4 @@
-//This is the controller that fetches the specific user's data from partyService.
+//This is the controller that fetches the specific user's data from contactService.
 
 (function() {
     'use strict';

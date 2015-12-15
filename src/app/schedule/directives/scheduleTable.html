@@ -1,0 +1,17 @@
+<div class="container">
+    <form>
+        <table class="table table-striped">
+            <tr>
+                <th>Week</th>
+                <th ng-repeat="index in vm.calls[0]">Contact {{index + 1}}</th>
+            </tr>
+            <tr ng-repeat="contactsPerWeek in vm.schedule[0]">
+                <td>{{contactsPerWeek.date}}</td>
+                <td ng-repeat="contactid in contactsPerWeek.contacts">
+                    <input type="checkbox" name="done" value="done">
+                    {{contactid}}</td>
+                <!--{{vm.contacts.contactid.firstName}}-->
+            </tr>
+        </table>
+    </form>
+</div>

@@ -14,7 +14,8 @@
       'app.core',
       'app.landing',
       'app.layout',
-      'app.contacts'
+      'app.contacts',
+      'app.schedule'
     ])
     .config(configFunction)
     .run(runFunction);

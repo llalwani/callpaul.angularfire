@@ -57,6 +57,7 @@
         }
 
         function doneEditing(contact){
+            contact.fullName = contact.firstName + " " + contact.lastName;
             vm.editedContact = null;
             vm.contacts.$save(contact);
         }

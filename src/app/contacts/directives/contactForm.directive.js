@@ -30,9 +30,14 @@
 
         //study this
         function addContact() {
+            //change fullName when updated
+            vm.newContact.fullName = vm.newContact.firstName + " " + vm.newContact.lastName;
             vm.contacts.$add(vm.newContact);
             vm.newContact = new contactService.Contact();
         }
+
+        //change fullName when updated
+
     }
 
 })();

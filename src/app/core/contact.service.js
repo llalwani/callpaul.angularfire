@@ -24,8 +24,9 @@
 //this is what I need to modify
     function Contact() {
       this.firstName = '';
-      this.firstName = '';
+      this.lastName = '';
       this.stars = '';
+      this.fullName = this.firstName + this.lastName
     }
   }
 

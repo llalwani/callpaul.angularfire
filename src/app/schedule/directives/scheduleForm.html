@@ -1,0 +1,9 @@
+<div class="container">
+    <h1 class="text-center">Schedule</h1>
+    <form ng-submit="vm.scheduleSequence()" class="form-inline party-form" role="form">
+        <div class="form-group">
+            <input ng-model="vm.callsPerWeek" type="number" class="form-control" placeholder="Calls per Week" required min="1">
+        </div>
+        <button type="submit" class="btn btn-success">Create</button>
+    </form>
+</div>
